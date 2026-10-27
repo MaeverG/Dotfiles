@@ -6,7 +6,7 @@ Mac setup: zsh (spaceship), tmux (tpm + tmux2k), neovim (LazyVim), alacritty, pl
 
 ```sh
 xcode-select --install          # gives you git
-git clone https://github.com/MaeverG/Dotfiles ~/Dotfiles
+git clone --recurse-submodules https://github.com/MaeverG/Dotfiles ~/Dotfiles
 ~/Dotfiles/install.sh
 gh auth login
 ```
@@ -24,7 +24,8 @@ Then open `nvim` once so lazy.nvim installs its plugins, and set your terminal f
 
 | Path | Goes to |
 | --- | --- |
-| `config/*` | `~/.config/*` (nvim, tmux, zsh, alacritty, mdless, htop, neofetch, flashspace, git) |
+| `config/nvim` | `~/.config/nvim`, a submodule of [MaeverVim](https://github.com/MaeverG/MaeverVim) |
+| `config/*` | `~/.config/*` (tmux, zsh, alacritty, mdless, htop, neofetch, flashspace, git) |
 | `home/.zshenv` | `~/.zshenv` (sources `~/.config/zsh/.zshrc`) |
 | `home/.gitconfig` | `~/.gitconfig` |
 | `Brewfile` | `brew bundle` |
@@ -37,4 +38,5 @@ Raycast: use its built-in Export/Import settings.
 ## Updating
 
 Because configs are symlinked, edits made in `~/.config` are already in this repo; just commit.
+nvim changes get committed in MaeverVim, then run `git add config/nvim` here to bump the submodule pointer.
 Run `./sync.sh` to refresh the `Brewfile` (and copy configs if any aren't symlinked).

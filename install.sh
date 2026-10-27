@@ -18,6 +18,9 @@ link() { # link <source> <target>
   echo "linked $dst"
 }
 
+# 0. nvim config lives in the MaeverVim submodule
+git -C "$REPO" submodule update --init --recursive
+
 # 1. Homebrew + packages
 if ! command -v brew >/dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
