@@ -25,7 +25,7 @@ Then open `nvim` once so lazy.nvim installs its plugins, and set your terminal f
 | Path | Goes to |
 | --- | --- |
 | `config/nvim` | `~/.config/nvim`, a submodule of [MaeverVim](https://github.com/MaeverG/MaeverVim) |
-| `config/*` | `~/.config/*` (tmux, zsh, alacritty, mdless, htop, neofetch, flashspace, git) |
+| `config/*` | `~/.config/*` (tmux, zsh, alacritty, htop, neofetch, flashspace, git) |
 | `home/.zshenv` | `~/.zshenv` (sources `~/.config/zsh/.zshrc`) |
 | `home/.gitconfig` | `~/.gitconfig` |
 | `Brewfile` | `brew bundle` |
