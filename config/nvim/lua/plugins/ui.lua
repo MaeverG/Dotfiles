@@ -121,6 +121,28 @@ return {
             },
             { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
             { Util.lualine.pretty_path() },
+            {
+              function()
+                return "󰍔 LeaderMD: md keys"
+              end,
+              cond = function()
+                return vim.bo.filetype == "markdown"
+              end,
+              color = function()
+                return { fg = Snacks.util.color("Comment") }
+              end,
+            },
+            {
+              function()
+                return require("util.markdown").wordcount()
+              end,
+              cond = function()
+                return vim.bo.filetype == "markdown"
+              end,
+              color = function()
+                return { fg = Snacks.util.color("Comment") }
+              end,
+            },
           },
           lualine_x = {
             Snacks.profiler.status(),

@@ -18,6 +18,7 @@ return {
     opts = {
       bigfile = { enabled = true },
       quickfile = { enabled = true },
+      image = { enabled = true }, -- inline images in markdown (needs ImageMagick + a supporting terminal)
       terminal = {
         win = {
           keys = {
