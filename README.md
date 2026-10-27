@@ -1,24 +1,40 @@
 # Dotfiles
 
-Backup anything you care about
-`mv ~/.config/nvim{,.bak}`
+Mac setup: zsh (spaceship), tmux (tpm + tmux2k), neovim (LazyVim), alacritty, plus assorted tool configs.
 
-1. Install Alacritty
-1. `brew install nvim`
-     1. `brew install ripgrep` -- this is for fzf
-1. `brew install tmux`
-     1. `brew install bash` -- this is for 2KAbhishek/tmux2k
-     1. `Ctrl+a I`
-1. `brew install zsh`
-     1. `brew install spaceship.zsh`
-     1. `brew install zsh-autosuggestions`
-     1. `brew install zsh-syntax-highlighting`
-     1. `brew install neofetch`
-1. Install NerdFonts - Im using Hurmit
+## New Mac
 
+```sh
+xcode-select --install          # gives you git
+git clone https://github.com/MaeverG/Dotfiles ~/Dotfiles
+~/Dotfiles/install.sh
+gh auth login
+```
 
-Start symlinking everything where you want it, I put everything in ~/.config
-`ln -s ~/Dotfiles/work/alacritty ~/.config/alacritty`
-`ln -s ~/Dotfiles/work/nvim ~/.config/nvim`
-`ln -s ~/Dotfiles/work/tmux ~/.config/tmux`
-`ln -s ~/Dotfiles/work/zsh ~/.config/zsh`
+`install.sh` will:
+1. Install Homebrew and everything in `Brewfile` (CLI tools, casks, Nerd Fonts)
+2. Symlink each `config/<name>` to `~/.config/<name>` and `home/.zshenv` to `~/.zshenv`
+   (anything already there is moved to `<name>.bak.<timestamp>`)
+3. Copy `home/.gitconfig` if you don't already have one
+4. Install tmux plugins via tpm
+
+Then open `nvim` once so lazy.nvim installs its plugins, and set your terminal font to a Nerd Font.
+
+## Layout
+
+| Path | Goes to |
+| --- | --- |
+| `config/*` | `~/.config/*` (nvim, tmux, zsh, alacritty, mdless, htop, neofetch, flashspace, git) |
+| `home/.zshenv` | `~/.zshenv` (sources `~/.config/zsh/.zshrc`) |
+| `home/.gitconfig` | `~/.gitconfig` |
+| `Brewfile` | `brew bundle` |
+
+## Not included (on purpose)
+
+`gh` credentials, shell history, tmux plugin clones (tpm reinstalls them), Raycast data, zsh caches.
+Raycast: use its built-in Export/Import settings.
+
+## Updating
+
+Because configs are symlinked, edits made in `~/.config` are already in this repo; just commit.
+Run `./sync.sh` to refresh the `Brewfile` (and copy configs if any aren't symlinked).

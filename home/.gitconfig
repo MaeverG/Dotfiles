@@ -1,0 +1,6 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Maeve Guardiani
+	email = maeve.guardiani@libertasfunding.com
+[credential]
+	helper = manager

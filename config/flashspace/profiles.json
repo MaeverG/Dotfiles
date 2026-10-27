@@ -1,0 +1,70 @@
+{
+  "profiles" : [
+    {
+      "id" : "D1236E7F-D880-4FCB-B263-10C528E05016",
+      "name" : "Default",
+      "workspaces" : [
+        {
+          "apps" : [
+            {
+              "autoOpen" : true,
+              "bundleIdentifier" : "com.tinyspeck.slackmacgap",
+              "iconPath" : "/Applications/Slack.app/Contents/Resources/electron.icns",
+              "name" : "Slack"
+            }
+          ],
+          "display" : "Built-in Retina Display",
+          "id" : "0E8823C3-6DB7-4242-B062-A114B80F0FC9",
+          "name" : "Slack",
+          "openAppsOnActivation" : true,
+          "shortcut" : "opt+1"
+        },
+        {
+          "apps" : [
+            {
+              "autoOpen" : true,
+              "bundleIdentifier" : "org.mozilla.firefox",
+              "iconPath" : "/Applications/Firefox.app/Contents/Resources/firefox.icns",
+              "name" : "Firefox"
+            }
+          ],
+          "display" : "Built-in Retina Display",
+          "id" : "D8A6AB59-B0F3-4898-88BE-38658D575585",
+          "name" : "Browser",
+          "openAppsOnActivation" : true,
+          "shortcut" : "opt+2"
+        },
+        {
+          "apps" : [
+            {
+              "autoOpen" : true,
+              "bundleIdentifier" : "org.alacritty",
+              "iconPath" : "/Applications/Alacritty.app/Contents/Resources/alacritty.icns",
+              "name" : "Alacritty"
+            }
+          ],
+          "display" : "Built-in Retina Display",
+          "id" : "10FB58C1-4F4A-4A98-855C-059E8AB920F9",
+          "name" : "Term",
+          "openAppsOnActivation" : true,
+          "shortcut" : "opt+3"
+        },
+        {
+          "apps" : [
+            {
+              "autoOpen" : true,
+              "bundleIdentifier" : "us.zoom.xos",
+              "iconPath" : "/Applications/zoom.us.app/Contents/Resources/ZPLogo.icns",
+              "name" : "Zoom"
+            }
+          ],
+          "display" : "Built-in Retina Display",
+          "id" : "EF903A57-F87B-4D53-99A4-A5FD13B3CA25",
+          "name" : "Misc",
+          "openAppsOnActivation" : true,
+          "shortcut" : "opt+4"
+        }
+      ]
+    }
+  ]
+}
