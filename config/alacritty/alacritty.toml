@@ -318,7 +318,7 @@ print_events = false
 render_timer = false
 
 [font]
-size = 30
+size = 15
 
 [font.bold]
 family = "iMWritingMono Nerd Font Mono"
@@ -384,3 +384,8 @@ persist = false
 mouse.enabled = true
 mouse.mods = "Shift"
 regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001f\u007f-\u009f<>\"\\s{-}\\^⟨⟩`\\\\]+"
+
+[[keyboard.bindings]]
+chars = "\u001B[13;2u"
+key = "Return"
+mods = "Shift"
